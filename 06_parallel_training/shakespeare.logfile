@@ -1,0 +1,245 @@
+Connected to tcp://x3006c0s31b1n0.hsn.cm.polaris.alcf.anl.gov:7919
+Found executable /home/nstrand/wordplay/venvs/polaris/2023-10-04/bin/python3
+Launching application 25e1e6aa-85cc-4fd6-b408-e49e3f18e02f
+[2024-03-12 21:33:16][INFO][configs:72] - Setting HF_DATASETS_CACHE to /home/nstrand/wordplay/.cache/huggingface/datasets
+[2024-03-12 21:33:19][INFO][distributed_c10d:442] - Added key: store_based_barrier_key:1 to store for rank: 3
+[2024-03-12 21:33:19][INFO][distributed_c10d:442] - Added key: store_based_barrier_key:1 to store for rank: 1
+[2024-03-12 21:33:19][INFO][distributed_c10d:442] - Added key: store_based_barrier_key:1 to store for rank: 2
+[2024-03-12 21:33:19][INFO][distributed_c10d:442] - Added key: store_based_barrier_key:1 to store for rank: 5
+[2024-03-12 21:33:19][INFO][distributed_c10d:442] - Added key: store_based_barrier_key:1 to store for rank: 4
+[2024-03-12 21:33:19][INFO][distributed_c10d:442] - Added key: store_based_barrier_key:1 to store for rank: 6
+[2024-03-12 21:33:19][INFO][distributed_c10d:442] - Added key: store_based_barrier_key:1 to store for rank: 7
+[2024-03-12 21:33:19][INFO][distributed_c10d:442] - Added key: store_based_barrier_key:1 to store for rank: 0
+[2024-03-12 21:33:19][INFO][distributed_c10d:476] - Rank 0: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+[2024-03-12 21:33:19][INFO][distributed_c10d:476] - Rank 2: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+[2024-03-12 21:33:19][INFO][distributed_c10d:476] - Rank 3: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+[2024-03-12 21:33:19][INFO][distributed_c10d:476] - Rank 1: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+[2024-03-12 21:33:19][INFO][distributed_c10d:476] - Rank 5: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+[2024-03-12 21:33:19][INFO][distributed_c10d:476] - Rank 4: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+[2024-03-12 21:33:19][INFO][distributed_c10d:476] - Rank 6: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+[2024-03-12 21:33:19][INFO][distributed_c10d:476] - Rank 7: Completed store-based barrier for key:store_based_barrier_key:1 with 8 nodes.
+[2024-03-12 21:33:21][INFO][dist:290] - [device='cuda'][rank=1/7][local_rank=1/3][node=1/1]
+[2024-03-12 21:33:21][INFO][dist:290] - [device='cuda'][rank=3/7][local_rank=3/3][node=1/1]
+[2024-03-12 21:33:21][INFO][dist:290] - [device='cuda'][rank=2/7][local_rank=2/3][node=0/1]
+[2024-03-12 21:33:21][INFO][dist:239] - DistInfo={
+    "DEVICE": "cuda",
+    "DEVICE_ID": "cuda:0",
+    "DISTRIBUTED_BACKEND": "nccl",
+    "GPUS_PER_NODE": 4,
+    "HOSTFILE": "/var/spool/pbs/aux/1783469.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov",
+    "HOSTNAME": "x3006c0s31b1n0.hsn.cm.polaris.alcf.anl.gov",
+    "HOSTS": "['x3006c0s31b1n0', 'x3006c0s37b1n0']",
+    "LOCAL_RANK": 0,
+    "MACHINE": "Polaris",
+    "NGPUS": 8,
+    "NODE_ID": 0,
+    "NUM_NODES": 2,
+    "RANK": 0,
+    "SCHEDULER": "PBS",
+    "WORLD_SIZE_IN_USE": 8,
+    "WORLD_SIZE_TOTAL": 8
+}
+[2024-03-12 21:33:21][INFO][dist:605] - [0/8] Using device='cuda' with backend='DDP' + 'nccl' for distributed training.
+[2024-03-12 21:33:21][INFO][dist:290] - [device='cuda'][rank=4/7][local_rank=0/3][node=0/1]
+[2024-03-12 21:33:21][INFO][dist:290] - [device='cuda'][rank=7/7][local_rank=3/3][node=1/1]
+[2024-03-12 21:33:21][INFO][dist:290] - [device='cuda'][rank=5/7][local_rank=1/3][node=1/1]
+[2024-03-12 21:33:21][INFO][dist:290] - [device='cuda'][rank=6/7][local_rank=2/3][node=0/1]
+[2024-03-12 21:33:21][INFO][dist:290] - [device='cuda'][rank=0/7][local_rank=0/3][node=0/1]
+[2024-03-12 21:33:21][WARNING][dist:296] - Using [8 / 8] available "cuda" devices !!
+[2024-03-12 21:33:21][INFO][configs:308] - Loading train from /home/nstrand/wordplay/data/shakespeare_char/train.bin
+[2024-03-12 21:33:21][INFO][configs:308] - Loading val from /home/nstrand/wordplay/data/shakespeare_char/val.bin
+[2024-03-12 21:33:21][INFO][configs:283] - Rescaling GAS -> GAS // WORLD_SIZE = 8 // 8
+[2024-03-12 21:33:21][INFO][configs:433] - Tokens per iteration: 131,072
+[2024-03-12 21:33:21][INFO][trainer:277] - Initializing a new model from scratch
+[2024-03-12 21:33:21][INFO][trainer:277] - Initializing a new model from scratch
+[2024-03-12 21:33:21][INFO][trainer:277] - Initializing a new model from scratch
+[2024-03-12 21:33:21][INFO][trainer:277] - Initializing a new model from scratch
+[2024-03-12 21:33:21][INFO][configs:456] - Using self.ptdtype=torch.bfloat16 on self.device_type='cuda'
+[2024-03-12 21:33:21][INFO][configs:462] - Initializing a new model from scratch
+[2024-03-12 21:33:21][INFO][dist:751] - Setting up wandb from rank: 0
+[2024-03-12 21:33:21][INFO][dist:752] - Using: WB PROJECT: WordPlay
+[2024-03-12 21:33:21][INFO][trainer:277] - Initializing a new model from scratch
+[2024-03-12 21:33:21][INFO][trainer:277] - Initializing a new model from scratch
+[2024-03-12 21:33:21][INFO][trainer:277] - Initializing a new model from scratch
+[2024-03-12 21:33:21][CRITICAL][trainer:338] - "devid='cuda:3'"
+[2024-03-12 21:33:21][CRITICAL][trainer:338] - "devid='cuda:2'"
+[2024-03-12 21:33:21][CRITICAL][trainer:338] - "devid='cuda:2'"
+[2024-03-12 21:33:21][CRITICAL][trainer:338] - "devid='cuda:1'"
+[2024-03-12 21:33:21][CRITICAL][trainer:338] - "devid='cuda:1'"
+[2024-03-12 21:33:21][CRITICAL][trainer:338] - "devid='cuda:3'"
+[2024-03-12 21:33:21][CRITICAL][trainer:338] - "devid='cuda:0'"
+wandb: Currently logged in as: nstrand (alcf6). Use `wandb login --relogin` to force relogin
+wandb: wandb version 0.16.4 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.15.12
+wandb: Run data is saved locally in /home/nstrand/wordplay/src/outputs/runs/shakespeare/pytorch/DDP/2024-03-12/21-33-19/wandb/run-20240312_213323-6xhgja8h
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run worldly-haze-1
+wandb: ⭐️ View project at https://wandb.ai/alcf6/WordPlay
+wandb: 🚀 View run at https://wandb.ai/alcf6/WordPlay/runs/6xhgja8h
+[2024-03-12 21:33:23][INFO][dist:782] - W&B RUN: [worldly-haze-1](https://wandb.ai/alcf6/WordPlay/runs/6xhgja8h)
+[2024-03-12 21:33:23][INFO][dist:810] - Running on machine='Polaris'
+[2024-03-12 21:33:23][WARNING][__main__:87] - {
+    "train": {
+        "framework": "pytorch",
+        "backend": "DDP",
+        "device": null,
+        "seed": null,
+        "port": null,
+        "ds_config_path": null,
+        "precision": null,
+        "ngpus": null,
+        "use_wandb": true,
+        "eval_interval": 250,
+        "log_interval": 5,
+        "eval_iters": 200,
+        "eval_only": false,
+        "always_save_checkpoint": false,
+        "init_from": "scratch",
+        "wandb_project": "WordPlay",
+        "max_iters": 100,
+        "warmup_iters": 100,
+        "dtype": "bfloat16",
+        "compile": false
+    },
+    "model": {
+        "n_layer": 6,
+        "n_head": 6,
+        "n_embd": 384,
+        "batch_size": 64,
+        "block_size": 256,
+        "activation": "gelu",
+        "dropout": 0.2,
+        "bias": false,
+        "vocab_size": 65
+    },
+    "data": {
+        "dataset": "shakespeare_char",
+        "out_dir": "out-shakespeare-char",
+        "root_path": null
+    },
+    "optimizer": {
+        "learning_rate": 0.001,
+        "weight_decay": 0.1,
+        "beta1": 0.9,
+        "beta2": 0.99,
+        "grad_clip": 1.0,
+        "decay_lr": true,
+        "lr_decay_iters": 5000,
+        "min_lr": 0.0001,
+        "gradient_accumulation_steps": 1
+    }
+}
+[2024-03-12 21:33:23][WARNING][__main__:88] - Output dir: /home/nstrand/wordplay/src/outputs/runs/shakespeare/pytorch/DDP/2024-03-12/21-33-19
+[2024-03-12 21:33:23][INFO][trainer:277] - Initializing a new model from scratch
+[2024-03-12 21:33:24][INFO][model:255] - number of parameters: 10.65M
+[2024-03-12 21:33:24][INFO][model:445] - num decayed parameter tensors: 26, with 10,740,096 parameters
+[2024-03-12 21:33:24][INFO][model:449] - num non-decayed parameter tensors: 13, with 4,992 parameters
+[2024-03-12 21:33:24][INFO][model:465] - using fused AdamW: True
+[2024-03-12 21:33:24][CRITICAL][trainer:338] - "devid='cuda:0'"
+[2024-03-12 21:33:26][INFO][trainer:700] - Startup time: 7.8827
+[2024-03-12 21:33:26][INFO][trainer:700] - Startup time: 7.8813
+[2024-03-12 21:33:26][INFO][trainer:700] - Startup time: 7.8831
+[2024-03-12 21:33:26][INFO][trainer:700] - Startup time: 7.8836
+  0%|          | 0/100 [00:00<?, ?it/s][2024-03-12 21:33:26][INFO][trainer:700] - Startup time: 8.0615
+[2024-03-12 21:33:26][INFO][trainer:700] - Startup time: 8.0605
+[2024-03-12 21:33:26][INFO][trainer:700] - Startup time: 8.0617
+[2024-03-12 21:33:26][INFO][trainer:700] - Startup time: 8.0611
+                              Training Legend
+┏━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃    abbr    ┃ desc                                                        ┃
+┡━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│    step    │ Current training iteration                                  │
+│    loss    │ Loss value                                                  │
+│     dt     │ Elapsed time per training step (measured in **ms**)         │
+│    dtf     │ Elapsed time per forward step (measured in **ms**)          │
+│    dtb     │ Elapsed time per backward step (measured in **ms**)         │
+│    sps     │ Samples per second                                          │
+│    mtps    │ Tokens per second, measured in MEGA (1 x 10^6) tokens / sec │
+│    mfu     │ Model flops utilization                                     │
+│ train_loss │ Training loss value                                         │
+│  val_loss  │ Validation loss value                                       │
+└────────────┴─────────────────────────────────────────────────────────────┘
+  1%|          | 1/100 [00:03<06:20,  3.84s/it][2024-03-12 21:33:30][INFO][distributed:1140] - Reducer buckets have been rebuilt in this iteration.
+[2024-03-12 21:33:30][INFO][distributed:1140] - Reducer buckets have been rebuilt in this iteration.
+[2024-03-12 21:33:30][INFO][distributed:1140] - Reducer buckets have been rebuilt in this iteration.
+[2024-03-12 21:33:30][INFO][distributed:1140] - Reducer buckets have been rebuilt in this iteration.
+[2024-03-12 21:33:30][INFO][distributed:1140] - Reducer buckets have been rebuilt in this iteration.
+[2024-03-12 21:33:30][INFO][distributed:1140] - Reducer buckets have been rebuilt in this iteration.
+[2024-03-12 21:33:30][INFO][distributed:1140] - Reducer buckets have been rebuilt in this iteration.
+[2024-03-12 21:33:30][INFO][distributed:1140] - Reducer buckets have been rebuilt in this iteration.
+  4%|▍         | 4/100 [00:04<01:03,  1.51it/s][2024-03-12 21:33:31][INFO][trainer:768] - step=5 loss=3.6734 dt=74.9460 dtf=4.5318 dtb=67.6461 sps=106.7436 mtps=1.7489 mfu=-100.0000 train_loss=4.3397 val_loss=4.3349
+  8%|▊         | 8/100 [00:04<00:24,  3.80it/s][2024-03-12 21:33:31][INFO][trainer:768] - step=10 loss=3.2651 dt=103.9140 dtf=4.4650 dtb=97.4080 sps=76.9867 mtps=1.2614 mfu=3.5859 train_loss=4.3397 val_loss=4.3349
+ 13%|█▎        | 13/100 [00:05<00:14,  6.08it/s][2024-03-12 21:33:32][INFO][trainer:768] - step=15 loss=2.9893 dt=75.8513 dtf=4.5242 dtb=69.2679 sps=105.4695 mtps=1.7280 mfu=3.7185 train_loss=4.3397 val_loss=4.3349
+ 19%|█▉        | 19/100 [00:05<00:08,  9.02it/s][2024-03-12 21:33:32][INFO][trainer:768] - step=20 loss=2.8019 dt=58.0834 dtf=4.4258 dtb=50.9185 sps=137.7330 mtps=2.2566 mfu=3.9882 train_loss=4.3397 val_loss=4.3349
+ 23%|██▎       | 23/100 [00:05<00:07,  9.67it/s][2024-03-12 21:33:33][INFO][trainer:768] - step=25 loss=2.6692 dt=102.0119 dtf=4.6374 dtb=95.3335 sps=78.4222 mtps=1.2849 mfu=3.9547 train_loss=4.3397 val_loss=4.3349
+ 29%|██▉       | 29/100 [00:06<00:06, 10.40it/s][2024-03-12 21:33:33][INFO][trainer:768] - step=30 loss=2.6042 dt=59.6811 dtf=4.4664 dtb=52.4553 sps=134.0458 mtps=2.1962 mfu=4.1836 train_loss=4.3397 val_loss=4.3349
+ 33%|███▎      | 33/100 [00:06<00:06, 11.15it/s][2024-03-12 21:33:33][INFO][trainer:768] - step=35 loss=2.5770 dt=82.1479 dtf=4.4792 dtb=75.6422 sps=97.3853 mtps=1.5956 mfu=4.2188 train_loss=4.3397 val_loss=4.3349
+ 39%|███▉      | 39/100 [00:07<00:05, 10.27it/s][2024-03-12 21:33:34][INFO][trainer:768] - step=40 loss=2.5452 dt=119.9982 dtf=4.5440 dtb=112.6603 sps=66.6677 mtps=1.0923 mfu=4.1075 train_loss=4.3397 val_loss=4.3349
+ 43%|████▎     | 43/100 [00:07<00:05, 10.21it/s][2024-03-12 21:33:34][INFO][trainer:768] - step=45 loss=2.5140 dt=119.7152 dtf=4.2626 dtb=113.4591 sps=66.8253 mtps=1.0949 mfu=4.0080 train_loss=4.3397 val_loss=4.3349
+ 49%|████▉     | 49/100 [00:08<00:05,  9.83it/s][2024-03-12 21:33:35][INFO][trainer:768] - step=50 loss=2.5271 dt=112.0589 dtf=4.5652 dtb=104.7133 sps=71.3910 mtps=1.1697 mfu=3.9397 train_loss=4.3397 val_loss=4.3349
+ 54%|█████▍    | 54/100 [00:08<00:04, 10.58it/s][2024-03-12 21:33:35][INFO][trainer:768] - step=55 loss=2.4865 dt=82.0698 dtf=4.4890 dtb=74.7561 sps=97.4780 mtps=1.5971 mfu=3.9998 train_loss=4.3397 val_loss=4.3349
+ 58%|█████▊    | 58/100 [00:09<00:03, 10.75it/s][2024-03-12 21:33:36][INFO][trainer:768] - step=60 loss=2.4741 dt=59.3127 dtf=4.3651 dtb=52.9207 sps=134.8783 mtps=2.2098 mfu=4.2280 train_loss=4.3397 val_loss=4.3349
+ 64%|██████▍   | 64/100 [00:09<00:03, 10.99it/s][2024-03-12 21:33:36][INFO][trainer:768] - step=65 loss=2.4709 dt=96.1665 dtf=4.4689 dtb=88.8799 sps=83.1890 mtps=1.3630 mfu=4.1927 train_loss=4.3397 val_loss=4.3349
+ 68%|██████▊   | 68/100 [00:10<00:02, 11.72it/s][2024-03-12 21:33:37][INFO][trainer:768] - step=70 loss=2.4557 dt=115.5189 dtf=4.4891 dtb=109.0051 sps=69.2527 mtps=1.1346 mfu=4.0960 train_loss=4.3397 val_loss=4.3349
+ 74%|███████▍  | 74/100 [00:10<00:02, 10.86it/s][2024-03-12 21:33:37][INFO][trainer:768] - step=75 loss=2.4646 dt=94.0675 dtf=6.5403 dtb=84.8293 sps=85.0453 mtps=1.3934 mfu=4.0825 train_loss=4.3397 val_loss=4.3349
+ 78%|███████▊  | 78/100 [00:11<00:02,  9.70it/s][2024-03-12 21:33:38][INFO][trainer:768] - step=80 loss=2.4528 dt=73.8491 dtf=4.3761 dtb=67.4521 sps=108.3290 mtps=1.7749 mfu=4.1788 train_loss=4.3397 val_loss=4.3349
+ 84%|████████▍ | 84/100 [00:11<00:01, 10.82it/s][2024-03-12 21:33:38][INFO][trainer:768] - step=85 loss=2.4256 dt=125.9692 dtf=4.6061 dtb=118.6477 sps=63.5076 mtps=1.0405 mfu=4.0568 train_loss=4.3397 val_loss=4.3349
+ 88%|████████▊ | 88/100 [00:12<00:01, 11.31it/s][2024-03-12 21:33:39][INFO][trainer:768] - step=90 loss=2.4331 dt=84.0532 dtf=4.4389 dtb=77.5229 sps=95.1778 mtps=1.5594 mfu=4.0944 train_loss=4.3397 val_loss=4.3349
+ 94%|█████████▍| 94/100 [00:12<00:00, 12.30it/s][2024-03-12 21:33:39][INFO][trainer:768] - step=95 loss=2.4453 dt=84.9473 dtf=4.4468 dtb=77.8219 sps=94.1760 mtps=1.5430 mfu=4.1236 train_loss=4.3397 val_loss=4.3349
+ 98%|█████████▊| 98/100 [00:12<00:00, 12.85it/s][2024-03-12 21:33:39][INFO][trainer:768] - step=100 loss=2.4303 dt=122.2996 dtf=4.3709 dtb=115.8612 sps=65.4132 mtps=1.0717 mfu=4.0159 train_loss=4.3397 val_loss=4.3349
+100%|██████████| 100/100 [00:13<00:00,  7.65it/s]
+[2024-03-12 21:33:39][INFO][trainer:666] - Saving checkpoint to: /home/nstrand/wordplay/src/outputs/runs/shakespeare/pytorch/DDP/2024-03-12/21-33-19
+[2024-03-12 21:33:39][INFO][trainer:667] - Saving model to: /home/nstrand/wordplay/src/outputs/runs/shakespeare/pytorch/DDP/2024-03-12/21-33-19/model.pth
+[2024-03-12 21:33:40][INFO][configs:132] - Appending /home/nstrand/wordplay/src/outputs/runs/shakespeare/pytorch/DDP/2024-03-12/21-33-19 to /home/nstrand/wordplay/src/ckpts/checkpoints.log
+wandb: Waiting for W&B process to finish... (success).
+wandb: \ 41.198 MB of 41.198 MB uploaded (0.000 MB deduped)
+wandb: Run history:
+wandb:              Loss/iter ▁▁▂▂▂▃▃▄▄▄▅▅▅▆▆▇▇▇██
+wandb:             Loss/lossf █▆▄▃▂▂▂▂▁▂▁▁▁▁▁▁▁▁▁▁
+wandb:               Loss/mfu ▁███████████████████
+wandb:             Loss/train ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:               Loss/val ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:          Timing/dt_avg ▃▆▃▁▆▁▄▇▇▇▃▁▅▇▅▃█▄▄█
+wandb:         Timing/dt_iter ▃▆▃▁▆▁▃▇▇▇▃▁▅▇▅▃█▄▄█
+wandb:          Timing/dt_tot ▃▆▃▁▆▁▄▇▇▇▃▁▅▇▅▃█▄▄█
+wandb:         Timing/dtb_avg ▃▆▃▁▆▁▄▇▇▇▃▁▅▇▅▃█▄▄█
+wandb:         Timing/dtb_tot ▃▆▃▁▆▁▄▇▇▇▃▁▅▇▅▃█▄▄█
+wandb:         Timing/dtf_avg ▂▂▂▂▂▂▂▂▁▂▂▁▂▂█▁▂▂▂▁
+wandb:         Timing/dtf_tot ▂▂▂▂▂▂▂▂▁▂▂▁▂▂█▁▂▂▂▁
+wandb:            Timing/iter ▁▁▂▂▂▃▃▄▄▄▅▅▅▆▆▇▇▇██
+wandb: Timing/samples_per_sec ▅▂▅█▂█▄▁▁▂▄█▃▂▃▅▁▄▄▁
+wandb:    Timing/startup_time ▁
+wandb:  Timing/tokens_per_sec ▅▂▅█▂█▄▁▁▂▄█▃▂▃▅▁▄▄▁
+wandb:          Training/iter ▁▁▂▂▂▃▃▄▄▄▅▅▅▆▆▇▇▇██
+wandb:          Training/loss █▆▄▃▂▂▂▂▁▂▁▁▁▁▁▁▁▁▁▁
+wandb:      Training/loss_tot █▆▄▃▂▂▂▂▁▂▁▁▁▁▁▁▁▁▁▁
+wandb:            Training/lr ▁▁▂▂▂▃▃▄▄▄▅▅▅▆▆▇▇▇██
+wandb:
+wandb: Run summary:
+wandb:              Loss/iter 100
+wandb:             Loss/lossf 2.43029
+wandb:               Loss/mfu 4.01593
+wandb:             Loss/train 4.33969
+wandb:               Loss/val 4.33486
+wandb:          Timing/dt_avg 0.06012
+wandb:         Timing/dt_iter 0.1223
+wandb:          Timing/dt_tot 0.12023
+wandb:         Timing/dtb_avg 0.11586
+wandb:         Timing/dtb_tot 0.11586
+wandb:         Timing/dtf_avg 0.00437
+wandb:         Timing/dtf_tot 0.00437
+wandb:            Timing/iter 99
+wandb: Timing/samples_per_sec 65.41315
+wandb:    Timing/startup_time 8.06109
+wandb:  Timing/tokens_per_sec 1071729.06951
+wandb:          Training/iter 99
+wandb:          Training/loss 2.43029
+wandb:      Training/loss_tot 2.43029
+wandb:            Training/lr 0.00099
+wandb:
+wandb: 🚀 View run worldly-haze-1 at: https://wandb.ai/alcf6/WordPlay/runs/6xhgja8h
+wandb: ️⚡ View job at https://wandb.ai/alcf6/WordPlay/jobs/QXJ0aWZhY3RDb2xsZWN0aW9uOjE0ODE3NDQyMw==/version_details/v0
+wandb: Synced 5 W&B file(s), 0 media file(s), 24 artifact file(s) and 0 other file(s)
+wandb: Find logs at: /home/nstrand/wordplay/src/outputs/runs/shakespeare/pytorch/DDP/2024-03-12/21-33-19/wandb/run-20240312_213323-6xhgja8h/logs
+Application 25e1e6aa resources: utime=125s stime=153s maxrss=3540572KB inblock=834472 oublock=506512 minflt=4809205 majflt=0 nvcsw=84599 nivcsw=26757
